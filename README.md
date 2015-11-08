@@ -15,7 +15,7 @@ angularjs module with a youtube api factory.
 
 ##### getVideos
 
-    getVideosFromChannelById({
+    youtubeFactory.getVideosFromChannelById({
         channelId: <CHANNEL_ID>,
         order: <ORDER-TYPE>, // (optional) default: 'date'
         q: <SEARCH_STRING>, // (optional) filters the channel result with your search string (=q)
@@ -23,14 +23,14 @@ angularjs module with a youtube api factory.
         key: key: <YOUR_API_KEY>,
     });
 
-    getVideosFromSearchByString({
+    youtubeFactory.getVideosFromSearchByString({
         channelId: <CHANNEL_ID>,
         q: <SEARCH_STRING>, //optional, filters the channel result with your search string (=q)
         maxResults: <MAX_RESULTS>, // (optional) default: 20
         key: key: <YOUR_API_KEY>,
     });
 
-    getVideosFromPlaylistById({
+    youtubeFactory.getVideosFromPlaylistById({
         playlistId: <PLAYLIST_ID>,
         maxResults: <MAX_RESULTS>, // (optional) default: 20
         key: key: <YOUR_API_KEY>,
@@ -39,7 +39,7 @@ angularjs module with a youtube api factory.
 
 ##### getChannel
 
-    getChannelById({
+    youtubeFactory.getChannelById({
         channelId: <CHANNEL_ID>,
         maxResults: <MAX_RESULTS>, // (optional) default: 1
         key: key: <YOUR_API_KEY>,
