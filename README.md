@@ -24,32 +24,28 @@ angularjs module with a youtube api factory.
     });
 
     getVideosFromSearchByString({
-            channelId: <CHANNEL_ID>,
-            q: <SEARCH_STRING>, //optional, filters the channel result with your search string (=q)
-            maxResults: <MAX_RESULTS>,
-            key: key: <YOUR_API_KEY>,
+        channelId: <CHANNEL_ID>,
+        q: <SEARCH_STRING>, //optional, filters the channel result with your search string (=q)
+        maxResults: <MAX_RESULTS>, // (optional) default: 20
+        key: key: <YOUR_API_KEY>,
 
-        });
+    });
 
+    getVideosFromPlaylistById({
+        playlistId: <PLAYLIST_ID>,
+        maxResults: <MAX_RESULTS>, // (optional) default: 20
+        key: key: <YOUR_API_KEY>,
+    });
 
-getVideosFromPlaylistById( {} )
 
 ##### getChannel
-* getChannelById( {} )
 
-Every function requires a youtubeSearchObject
-for example:
+    getChannelById({
+        channelId: <CHANNEL_ID>,
+        maxResults: <MAX_RESULTS>, // (optional) default: 1
+        key: key: <YOUR_API_KEY>,
+    });
 
-    {
-        part: "id,snippet",
-        type: "video",
-        q: "tophits",
-        order: "date",
-        maxResults: 4,
-        key: <YOUR_API_KEY>
-    }
-
-Read the youtube documentation for more information: https://developers.google.com/youtube/v3/docs/
 
 ### Youtube JSON API
 
