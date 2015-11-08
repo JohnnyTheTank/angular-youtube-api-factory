@@ -28,7 +28,6 @@ angularjs module with a youtube api factory.
         q: <SEARCH_STRING>, //optional, filters the channel result with your search string (=q)
         maxResults: <MAX_RESULTS>, // (optional) default: 20
         key: key: <YOUR_API_KEY>,
-
     });
 
     getVideosFromPlaylistById({
