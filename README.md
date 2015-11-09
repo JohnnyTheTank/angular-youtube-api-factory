@@ -1,6 +1,6 @@
 **angular-youtube-api-factory** is an angularjs module with a youtube api factory.
 
-* Author: Jonathan Hornung ([JohnnyTheTank](https://github.com/JohnnyTheTank))
+Author: Jonathan Hornung ([JohnnyTheTank](https://github.com/JohnnyTheTank))
 
 ## Usage
 
@@ -29,7 +29,8 @@ youtubeFactory.getVideosFromChannelById({
     order: <ORDER-TYPE>, // (optional) default: 'date'
     q: <SEARCH_STRING>, // (optional) filters the channel result with your search string
     maxResults: <MAX_RESULTS>, // (optional) default: 20
-    key: key: <YOUR_API_KEY>,
+    pageToken: <PAGE-TOKEN>, // (optional)
+    key: <YOUR_API_KEY>,
 });
 ```
 ```js
@@ -37,7 +38,8 @@ youtubeFactory.getVideosFromSearchByString({
     channelId: <CHANNEL_ID>,
     q: <SEARCH_STRING>, //search string
     maxResults: <MAX_RESULTS>, // (optional) default: 20
-    key: key: <YOUR_API_KEY>,
+    pageToken: <PAGE-TOKEN>, // (optional)
+    key: <YOUR_API_KEY>,
 });
 ```
 
@@ -45,7 +47,8 @@ youtubeFactory.getVideosFromSearchByString({
 youtubeFactory.getVideosFromPlaylistById({
     playlistId: <PLAYLIST_ID>,
     maxResults: <MAX_RESULTS>, // (optional) default: 20
-    key: key: <YOUR_API_KEY>,
+    pageToken: <PAGE-TOKEN>, // (optional)
+    key: <YOUR_API_KEY>,
 });
 ```
 
@@ -55,7 +58,8 @@ youtubeFactory.getVideosFromPlaylistById({
 youtubeFactory.getChannelById({
     channelId: <CHANNEL_ID>,
     maxResults: <MAX_RESULTS>, // (optional) default: 1
-    key: key: <YOUR_API_KEY>,
+    pageToken: <PAGE-TOKEN>, // (optional)
+    key: <YOUR_API_KEY>,
 });
 ```
 
