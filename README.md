@@ -22,35 +22,42 @@
 
 #### getVideos
 
-    youtubeFactory.getVideosFromChannelById({
-        channelId: <CHANNEL_ID>,
-        order: <ORDER-TYPE>, // (optional) default: 'date'
-        q: <SEARCH_STRING>, // (optional) filters the channel result with your search string (=q)
-        maxResults: <MAX_RESULTS>, // (optional) default: 20
-        key: key: <YOUR_API_KEY>,
-    });
 
-    youtubeFactory.getVideosFromSearchByString({
-        channelId: <CHANNEL_ID>,
-        q: <SEARCH_STRING>, //optional, filters the channel result with your search string (=q)
-        maxResults: <MAX_RESULTS>, // (optional) default: 20
-        key: key: <YOUR_API_KEY>,
-    });
+```javascipt
+youtubeFactory.getVideosFromChannelById({
+    channelId: <CHANNEL_ID>,
+    order: <ORDER-TYPE>, // (optional) default: 'date'
+    q: <SEARCH_STRING>, // (optional) filters the channel result with your search string (=q)
+    maxResults: <MAX_RESULTS>, // (optional) default: 20
+    key: key: <YOUR_API_KEY>,
+});
+```
+```javascipt
+youtubeFactory.getVideosFromSearchByString({
+    channelId: <CHANNEL_ID>,
+    q: <SEARCH_STRING>, //optional, filters the channel result with your search string (=q)
+    maxResults: <MAX_RESULTS>, // (optional) default: 20
+    key: key: <YOUR_API_KEY>,
+});
+```
 
-    youtubeFactory.getVideosFromPlaylistById({
-        playlistId: <PLAYLIST_ID>,
-        maxResults: <MAX_RESULTS>, // (optional) default: 20
-        key: key: <YOUR_API_KEY>,
-    });
+```javascipt
+youtubeFactory.getVideosFromPlaylistById({
+    playlistId: <PLAYLIST_ID>,
+    maxResults: <MAX_RESULTS>, // (optional) default: 20
+    key: key: <YOUR_API_KEY>,
+});
+```
 
 
 #### getChannel
-
-    youtubeFactory.getChannelById({
-        channelId: <CHANNEL_ID>,
-        maxResults: <MAX_RESULTS>, // (optional) default: 1
-        key: key: <YOUR_API_KEY>,
-    });
+```javascipt
+youtubeFactory.getChannelById({
+    channelId: <CHANNEL_ID>,
+    maxResults: <MAX_RESULTS>, // (optional) default: 1
+    key: key: <YOUR_API_KEY>,
+});
+```
 
 
 ## Youtube JSON API
