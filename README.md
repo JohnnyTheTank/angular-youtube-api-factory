@@ -10,15 +10,15 @@
 3. Include dependencies in your HTML.
     1. When using bower:
 
-        ```html
-	    <script src="bower_components/angular/angular.js"></script>
-	    <script src="bower_components/angular-youtube-api-factory/angular-youtube-api-factory.js"></script>
-        ```
+    ```html
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-youtube-api-factory/angular-youtube-api-factory.js"></script>
+    ```
 
 4. Use the factory `youtubeFactory`.
 
 
-### factory functions
+### factory methods
 
 #### getVideos
 
