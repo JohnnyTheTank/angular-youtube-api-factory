@@ -51,3 +51,7 @@ angularjs module with a youtube api factory.
 * Doku: https://developers.google.com/youtube/v3/docs/
 * Api Explorer: https://developers.google.com/apis-explorer/#p/youtube/v3/
 * Kanal-ID Converter: http://kid.yt.j.pfweb.eu/
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/JohnnyTheTank/angular-youtube-api-factory/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
