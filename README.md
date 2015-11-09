@@ -23,7 +23,7 @@
 #### getVideos
 
 
-```javascipt
+```js
 youtubeFactory.getVideosFromChannelById({
     channelId: <CHANNEL_ID>,
     order: <ORDER-TYPE>, // (optional) default: 'date'
@@ -32,7 +32,7 @@ youtubeFactory.getVideosFromChannelById({
     key: key: <YOUR_API_KEY>,
 });
 ```
-```javascipt
+```js
 youtubeFactory.getVideosFromSearchByString({
     channelId: <CHANNEL_ID>,
     q: <SEARCH_STRING>, //optional, filters the channel result with your search string (=q)
@@ -41,7 +41,7 @@ youtubeFactory.getVideosFromSearchByString({
 });
 ```
 
-```javascipt
+```js
 youtubeFactory.getVideosFromPlaylistById({
     playlistId: <PLAYLIST_ID>,
     maxResults: <MAX_RESULTS>, // (optional) default: 20
@@ -51,7 +51,7 @@ youtubeFactory.getVideosFromPlaylistById({
 
 
 #### getChannel
-```javascipt
+```js
 youtubeFactory.getChannelById({
     channelId: <CHANNEL_ID>,
     maxResults: <MAX_RESULTS>, // (optional) default: 1
