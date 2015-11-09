@@ -26,8 +26,8 @@ Author: Jonathan Hornung ([JohnnyTheTank](https://github.com/JohnnyTheTank))
 ```js
 youtubeFactory.getVideosFromChannelById({
     channelId: <CHANNEL_ID>,
-    order: <ORDER-TYPE>, // (optional) default: 'date'
     q: <SEARCH_STRING>, // (optional) filters the channel result with your search string
+    order: <ORDER-TYPE>, // (optional) default: 'date'
     maxResults: <MAX_RESULTS>, // (optional) default: 20
     pageToken: <PAGE-TOKEN>, // (optional)
     key: <YOUR_API_KEY>,
@@ -35,8 +35,8 @@ youtubeFactory.getVideosFromChannelById({
 ```
 ```js
 youtubeFactory.getVideosFromSearchByString({
-    channelId: <CHANNEL_ID>,
     q: <SEARCH_STRING>, //search string
+    order: <ORDER-TYPE>, // (optional) default: 'date'
     maxResults: <MAX_RESULTS>, // (optional) default: 20
     pageToken: <PAGE-TOKEN>, // (optional)
     key: <YOUR_API_KEY>,
