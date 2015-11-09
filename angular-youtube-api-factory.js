@@ -79,11 +79,11 @@ angular.module("jtt_youtube", [])
                         youtubeSearchData.object.q = _params.q;
                     }
 
-                    if (_params.nextPageToken) {
-                        youtubeSearchData.object.pakeToken = _params.nextPageToken;
-                    }
-
                     youtubeSearchData.url = this.getYoutubeApiBaseUrl()+"search?";
+
+                    if (_params.nextPageToken) {
+                        youtubeSearchData.url += "pageToken="+_params.nextPageToken+"&";
+                    }
                     break;
 
                 case "videosFromSearchByString":
@@ -101,6 +101,9 @@ angular.module("jtt_youtube", [])
                     }
 
                     youtubeSearchData.url = this.getYoutubeApiBaseUrl()+"search?";
+                    if (_params.nextPageToken) {
+                        youtubeSearchData.url += "pageToken="+_params.nextPageToken+"&";
+                    }
                     break;
 
                 case "videosFromPlaylistById":
@@ -117,6 +120,9 @@ angular.module("jtt_youtube", [])
                     }
 
                     youtubeSearchData.url = this.getYoutubeApiBaseUrl()+"playlistItems?";
+                    if (_params.nextPageToken) {
+                        youtubeSearchData.url += "pageToken="+_params.nextPageToken+"&";
+                    }
                     break;
 
                 case "channelById":
@@ -129,6 +135,9 @@ angular.module("jtt_youtube", [])
                     };
 
                     youtubeSearchData.url = this.getYoutubeApiBaseUrl()+"search?";
+                    if (_params.nextPageToken) {
+                        youtubeSearchData.url += "pageToken="+_params.nextPageToken+"&";
+                    }
                     break;
             }
 
