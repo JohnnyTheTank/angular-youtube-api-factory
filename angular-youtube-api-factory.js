@@ -3,6 +3,7 @@
 /**
  * author: Jonathan Hornung (https://github.com/JohnnyTheTank)
  * GitHub: https://github.com/JohnnyTheTank/angular-youtube-api-factory
+ * Licence: MIT
  */
 
 angular.module("jtt_youtube", [])
