@@ -1,5 +1,10 @@
 "use strict";
 
+/**
+ * author: Jonathan Hornung (https://github.com/JohnnyTheTank)
+ * GitHub: https://github.com/JohnnyTheTank/angular-youtube-api-factory
+ */
+
 angular.module("jtt_youtube", [])
     .factory('youtubeFactory', ['$http', 'youtubeSearchDataService', function ($http, youtubeSearchDataService) {
 
