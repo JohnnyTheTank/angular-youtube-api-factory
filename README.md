@@ -2,6 +2,10 @@
 
 Author: Jonathan Hornung ([JohnnyTheTank](https://github.com/JohnnyTheTank))
 
+## Demo
+View [demo on plnkr](http://plnkr.co/edit/amiImp?p=preview)
+
+
 ## Usage
 
 1. Install via [bower](http://bower.io/) :
