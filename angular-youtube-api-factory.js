@@ -1,9 +1,9 @@
 "use strict";
 
 /**
- * author: Jonathan Hornung (https://github.com/JohnnyTheTank)
- * GitHub: https://github.com/JohnnyTheTank/angular-youtube-api-factory
- * Licence: MIT
+ @author Jonathan Hornung (https://github.com/JohnnyTheTank)
+ @url https://github.com/JohnnyTheTank/angular-youtube-api-factory
+ @licence MIT
  */
 
 angular.module("jtt_youtube", [])

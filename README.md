@@ -88,6 +88,10 @@ youtubeFactory.getChannelById({
 * Kanal-ID Converter: http://kid.yt.j.pfweb.eu/
 
 
+## License
+
+MIT
+
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/JohnnyTheTank/angular-youtube-api-factory/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
