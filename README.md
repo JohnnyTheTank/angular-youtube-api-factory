@@ -31,7 +31,12 @@ youtubeFactory.getVideosFromChannelById({
     maxResults: <MAX_RESULTS>, // (optional) default: 20
     pageToken: <PAGE-TOKEN>, // (optional)
     key: <YOUR_API_KEY>,
+}).success(function (_data) {
+    //on success
+}).error(function (_data) {
+    //on error
 });
+
 ```
 ```js
 youtubeFactory.getVideosFromSearchByString({
@@ -40,6 +45,10 @@ youtubeFactory.getVideosFromSearchByString({
     maxResults: <MAX_RESULTS>, // (optional) default: 20
     pageToken: <PAGE-TOKEN>, // (optional)
     key: <YOUR_API_KEY>,
+}).success(function (_data) {
+    //on success
+}).error(function (_data) {
+    //on error
 });
 ```
 
@@ -49,6 +58,10 @@ youtubeFactory.getVideosFromPlaylistById({
     maxResults: <MAX_RESULTS>, // (optional) default: 20
     pageToken: <PAGE-TOKEN>, // (optional)
     key: <YOUR_API_KEY>,
+}).success(function (_data) {
+    //on success
+}).error(function (_data) {
+    //on error
 });
 ```
 
@@ -60,6 +73,10 @@ youtubeFactory.getChannelById({
     maxResults: <MAX_RESULTS>, // (optional) default: 1
     pageToken: <PAGE-TOKEN>, // (optional)
     key: <YOUR_API_KEY>,
+}).success(function (_data) {
+    //on success
+}).error(function (_data) {
+    //on error
 });
 ```
 
