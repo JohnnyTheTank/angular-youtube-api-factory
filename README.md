@@ -2,9 +2,6 @@
 
 Author: Jonathan Hornung ([JohnnyTheTank](https://github.com/JohnnyTheTank))
 
-## Demo
-View [demo on plnkr](http://plnkr.co/edit/amiImp?p=preview)
-
 
 ## Usage
 
