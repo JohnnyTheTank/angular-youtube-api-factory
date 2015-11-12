@@ -16,7 +16,7 @@ View [demo on plnkr](http://plnkr.co/edit/amiImp?p=preview)
 
     ```html
     <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/angular-youtube-api-factory/angular-youtube-api-factory.js"></script>
+    <script src="bower_components/angular-youtube-api-factory/src/angular-youtube-api-factory.js"></script>
     ```
 
 4. Use the factory `youtubeFactory`.
