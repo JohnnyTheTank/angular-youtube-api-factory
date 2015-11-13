@@ -13,45 +13,45 @@ angular.module("jtt_youtube", [])
 
         youtubeFactory.getVideosFromChannelById = function (_params) {
 
-            var _youtubeSearchData = youtubeSearchDataService.getNew("videosFromChannelById", _params);
+            var youtubeSearchData = youtubeSearchDataService.getNew("videosFromChannelById", _params);
 
             return $http({
                 method: 'GET',
-                url: _youtubeSearchData.url,
-                params: _youtubeSearchData.object,
+                url: youtubeSearchData.url,
+                params: youtubeSearchData.object,
             });
         };
 
         youtubeFactory.getVideosFromSearchByString = function (_params) {
 
-            var _youtubeSearchData = youtubeSearchDataService.getNew("videosFromSearchByString", _params);
+            var youtubeSearchData = youtubeSearchDataService.getNew("videosFromSearchByString", _params);
 
             return $http({
                 method: 'GET',
-                url: _youtubeSearchData.url,
-                params: _youtubeSearchData.object,
+                url: youtubeSearchData.url,
+                params: youtubeSearchData.object,
             });
         };
 
         youtubeFactory.getVideosFromPlaylistById = function (_params) {
 
-            var _youtubeSearchData = youtubeSearchDataService.getNew("videosFromPlaylistById", _params);
+            var youtubeSearchData = youtubeSearchDataService.getNew("videosFromPlaylistById", _params);
 
             return $http({
                 method: 'GET',
-                url: _youtubeSearchData.url,
-                params: _youtubeSearchData.object,
+                url: youtubeSearchData.url,
+                params: youtubeSearchData.object,
             });
         };
 
         youtubeFactory.getChannelById = function (_params) {
 
-            var _youtubeSearchData = youtubeSearchDataService.getNew("channelById", _params);
+            var youtubeSearchData = youtubeSearchDataService.getNew("channelById", _params);
 
             return $http({
                 method: 'GET',
-                url: _youtubeSearchData.url,
-                params: _youtubeSearchData.object,
+                url: youtubeSearchData.url,
+                params: youtubeSearchData.object,
             });
         };
 
