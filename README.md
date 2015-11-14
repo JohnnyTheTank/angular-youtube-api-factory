@@ -26,12 +26,12 @@ Author: Jonathan Hornung ([JohnnyTheTank](https://github.com/JohnnyTheTank))
 
 ```js
 youtubeFactory.getVideosFromChannelById({
-    channelId: <CHANNEL_ID>,
-    q: <SEARCH_STRING>, // (optional) filters the channel result with your search string
-    order: <ORDER_TYPE>, // (optional) default: 'date'
-    maxResults: <MAX_RESULTS>, // (optional) default: 20
-    pageToken: <PAGE_TOKEN>, // (optional)
-    key: <YOUR_API_KEY>,
+    channelId: "<CHANNEL_ID>",
+    q: "<SEARCH_STRING>", // (optional) filters the channel result with your search string
+    order: "<ORDER_TYPE>", // (optional) default: 'date'
+    maxResults: "<MAX_RESULTS>", // (optional) default: 20
+    pageToken: "<PAGE_TOKEN>", // (optional)
+    key: "<YOUR_API_KEY>",
 }).success(function (_data) {
     //on success
 }).error(function (_data) {
@@ -41,11 +41,11 @@ youtubeFactory.getVideosFromChannelById({
 ```
 ```js
 youtubeFactory.getVideosFromSearchByString({
-    q: <SEARCH_STRING>, //search string
-    order: <ORDER_TYPE>, // (optional) default: 'date'
-    maxResults: <MAX_RESULTS>, // (optional) default: 20
-    pageToken: <PAGE_TOKEN>, // (optional)
-    key: <YOUR_API_KEY>,
+    q: "<SEARCH_STRING>", //search string
+    order: "<ORDER_TYPE>", // (optional) default: 'date'
+    maxResults: "<MAX_RESULTS>", // (optional) default: 20
+    pageToken: "<PAGE_TOKEN>", // (optional)
+    key: "<YOUR_API_KEY>",
 }).success(function (_data) {
     //on success
 }).error(function (_data) {
@@ -55,10 +55,10 @@ youtubeFactory.getVideosFromSearchByString({
 
 ```js
 youtubeFactory.getVideosFromPlaylistById({
-    playlistId: <PLAYLIST_ID>,
-    maxResults: <MAX_RESULTS>, // (optional) default: 20
-    pageToken: <PAGE_TOKEN>, // (optional)
-    key: <YOUR_API_KEY>,
+    playlistId: "<PLAYLIST_ID>",
+    maxResults: "<MAX_RESULTS>", // (optional) default: 20
+    pageToken: "<PAGE_TOKEN>", // (optional)
+    key: "<YOUR_API_KEY>",
 }).success(function (_data) {
     //on success
 }).error(function (_data) {
@@ -70,10 +70,10 @@ youtubeFactory.getVideosFromPlaylistById({
 #### getChannel
 ```js
 youtubeFactory.getChannelById({
-    channelId: <CHANNEL_ID>,
-    maxResults: <MAX_RESULTS>, // (optional) default: 1
-    pageToken: <PAGE_TOKEN>, // (optional)
-    key: <YOUR_API_KEY>,
+    channelId: "<CHANNEL_ID>",
+    maxResults: "<MAX_RESULTS>", // (optional) default: 1
+    pageToken: "<PAGE_TOKEN>", // (optional)
+    key: "<YOUR_API_KEY>",
 }).success(function (_data) {
     //on success
 }).error(function (_data) {
