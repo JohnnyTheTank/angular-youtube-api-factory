@@ -58,10 +58,9 @@ angular.module("jtt_youtube", [])
         return youtubeFactory;
     }])
     .service('youtubeSearchDataService', function () {
-        this.getYoutubeApiBaseUrl = function (_params) {
+        this.getApiBaseUrl = function (_params) {
             return "https://content.googleapis.com/youtube/v3/";
         };
-
 
         this.getNew = function (_type, _params) {
 
@@ -85,7 +84,7 @@ angular.module("jtt_youtube", [])
                         youtubeSearchData.object.q = _params.searchString;
                     }
 
-                    youtubeSearchData.url = this.getYoutubeApiBaseUrl()+"search?";
+                    youtubeSearchData.url = this.getApiBaseUrl()+"search?";
 
                     if (_params.nextPageToken) {
                         youtubeSearchData.url += "pageToken="+_params.nextPageToken+"&";
@@ -102,11 +101,7 @@ angular.module("jtt_youtube", [])
                         maxResults: _params.maxResults || 20,
                     };
 
-                    if (_params.nextPageToken) {
-                        youtubeSearchData.object.pakeToken = _params.nextPageToken;
-                    }
-
-                    youtubeSearchData.url = this.getYoutubeApiBaseUrl()+"search?";
+                    youtubeSearchData.url = this.getApiBaseUrl()+"search?";
                     if (_params.nextPageToken) {
                         youtubeSearchData.url += "pageToken="+_params.nextPageToken+"&";
                     }
@@ -121,11 +116,7 @@ angular.module("jtt_youtube", [])
                         maxResults: _params.maxResults || 20,
                     };
 
-                    if (_params.nextPageToken) {
-                        youtubeSearchData.object.pakeToken = _params.nextPageToken;
-                    }
-
-                    youtubeSearchData.url = this.getYoutubeApiBaseUrl()+"playlistItems?";
+                    youtubeSearchData.url = this.getApiBaseUrl()+"playlistItems?";
                     if (_params.nextPageToken) {
                         youtubeSearchData.url += "pageToken="+_params.nextPageToken+"&";
                     }
@@ -140,7 +131,7 @@ angular.module("jtt_youtube", [])
                         maxResults: _params.maxResults || 1,
                     };
 
-                    youtubeSearchData.url = this.getYoutubeApiBaseUrl()+"search?";
+                    youtubeSearchData.url = this.getApiBaseUrl()+"search?";
                     if (_params.nextPageToken) {
                         youtubeSearchData.url += "pageToken="+_params.nextPageToken+"&";
                     }
