@@ -80,8 +80,8 @@ angular.module("jtt_youtube", [])
                         maxResults: _params.maxResults || 20,
                     };
 
-                    if (_params.searchString) {
-                        youtubeSearchData.object.q = _params.searchString;
+                    if (_params.q) {
+                        youtubeSearchData.object.q = _params.q;
                     }
 
                     youtubeSearchData.url = this.getApiBaseUrl()+"search?";
@@ -95,7 +95,7 @@ angular.module("jtt_youtube", [])
                     youtubeSearchData.object = {
                         part: "id,snippet",
                         type: "video",
-                        q: _params.searchString,
+                        q: _params.q,
                         order: _params.order || "date",
                         key: _params.key,
                         maxResults: _params.maxResults || 20,
