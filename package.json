@@ -1,6 +1,6 @@
 {
   "name": "angular-youtube-api-factory",
-  "version": "0.3.4",
+  "version": "0.3.5",
   "description": "angularjs factory for youtube json rest api requests",
   "main": "Gruntfile.js",
   "scripts": {

@@ -4,7 +4,7 @@
   "authors": [
     "Jonathan Hornung <jonathan.hornung@gmail.com>"
   ],
-  "version": "0.3.4",
+  "version": "0.3.5",
   "description": "angular factory for youtube rest api connection",
   "main": "dist/angular-youtube-api-factory.min.js",
   "moduleType": [],
