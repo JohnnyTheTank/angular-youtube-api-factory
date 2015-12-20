@@ -29,8 +29,8 @@ Author: Jonathan Hornung ([JohnnyTheTank](https://github.com/JohnnyTheTank))
 youtubeFactory.getVideosFromChannelById({
     channelId: "<CHANNEL_ID>",
     q: "<SEARCH_STRING>", // (optional) filters the channel result with your search string
-    order: "<ORDER_TYPE>", // (optional) default: 'date'
-    maxResults: "<MAX_RESULTS>", // (optional) correct values: 0-50 // default: 5
+    order: "<ORDER_TYPE>", // (optional) valid values: 'date', 'rating', 'relevance', 'title', 'videoCount', 'viewCount' | default: 'date'
+    maxResults: "<MAX_RESULTS>", // (optional) valid values: 0-50 | default: 5
     pageToken: "<PAGE_TOKEN>", // (optional)
     key: "<YOUR_API_KEY>",
 }).success(function (_data) {
@@ -44,8 +44,8 @@ youtubeFactory.getVideosFromChannelById({
 //docs: https://developers.google.com/youtube/v3/docs/search/list
 youtubeFactory.getVideosFromSearchByString({
     q: "<SEARCH_STRING>", //search string
-    order: "<ORDER_TYPE>", // (optional) default: 'date'
-    maxResults: "<MAX_RESULTS>", // (optional) correct values: 0-50 // default: 5
+    order: "<ORDER_TYPE>", // (optional) valid values: 'date', 'rating', 'relevance', 'title', 'videoCount', 'viewCount' | default: 'date'
+    maxResults: "<MAX_RESULTS>", // (optional) valid values: 0-50 | default: 5
     pageToken: "<PAGE_TOKEN>", // (optional)
     key: "<YOUR_API_KEY>",
 }).success(function (_data) {
@@ -59,7 +59,7 @@ youtubeFactory.getVideosFromSearchByString({
 //docs: https://developers.google.com/youtube/v3/docs/playlists/list
 youtubeFactory.getVideosFromPlaylistById({
     playlistId: "<PLAYLIST_ID>",
-    maxResults: "<MAX_RESULTS>", // (optional) correct values: 0-50 // default: 5
+    maxResults: "<MAX_RESULTS>", // (optional) valid values: 0-50 // default: 5
     pageToken: "<PAGE_TOKEN>", // (optional)
     key: "<YOUR_API_KEY>",
 }).success(function (_data) {
