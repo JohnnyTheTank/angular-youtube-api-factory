@@ -90,6 +90,8 @@ angular.module("jtt_youtube", [])
 
                     if (typeof _params.order !== "undefined") {
                         youtubeSearchData.object.order = _params.order;
+                    } else {
+                        youtubeSearchData.object.order = "date";
                     }
                     if (typeof _params.q !== "undefined") {
                         youtubeSearchData.object.q = _params.q;
@@ -109,6 +111,8 @@ angular.module("jtt_youtube", [])
                     youtubeSearchData.object.type = "video";
                     if (typeof _params.order !== "undefined") {
                         youtubeSearchData.object.order = _params.order;
+                    } else {
+                        youtubeSearchData.object.order = "date";
                     }
                     if (typeof _params.q !== "undefined") {
                         youtubeSearchData.object.q = _params.q;
