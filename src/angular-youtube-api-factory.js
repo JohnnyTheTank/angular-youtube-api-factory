@@ -55,6 +55,17 @@ angular.module("jtt_youtube", [])
             });
         };
 
+        youtubeFactory.getVideoById = function (_params) {
+
+            var youtubeSearchData = youtubeSearchDataService.getNew("videoById", _params);
+
+            return $http({
+                method: 'GET',
+                url: youtubeSearchData.url,
+                params: youtubeSearchData.object,
+            });
+        };
+
         return youtubeFactory;
     }])
     .service('youtubeSearchDataService', function () {
@@ -65,75 +76,82 @@ angular.module("jtt_youtube", [])
         this.getNew = function (_type, _params) {
 
             var youtubeSearchData = {
-                object: {},
+                object: {
+                    part: "id,snippet",
+                    key: _params.key,
+                },
                 url: "",
             };
 
             switch (_type) {
                 case "videosFromChannelById":
-                    youtubeSearchData.object = {
-                        part: "id,snippet",
-                        type: "video",
-                        channelId: _params.channelId,
-                        order: _params.order || "date",
-                        key: _params.key,
-                        maxResults: _params.maxResults || 20,
-                    };
+                    youtubeSearchData.object.type = "video";
+                    youtubeSearchData.object.channelId = _params.channelId;
 
-                    if (_params.q) {
+                    if (typeof _params.order !== "undefined") {
+                        youtubeSearchData.object.order = _params.order;
+                    }
+                    if (typeof _params.q !== "undefined") {
                         youtubeSearchData.object.q = _params.q;
                     }
+                    if (typeof _params.maxResults !== "undefined") {
+                        youtubeSearchData.object.maxResults = _params.maxResults;
+                    }
 
-                    youtubeSearchData.url = this.getApiBaseUrl()+"search?";
+                    youtubeSearchData.url = this.getApiBaseUrl() + "search?";
 
-                    if (_params.nextPageToken) {
-                        youtubeSearchData.url += "pageToken="+_params.nextPageToken+"&";
+                    if (typeof _params.nextPageToken !== "undefined") {
+                        youtubeSearchData.url += "pageToken=" + _params.nextPageToken + "&";
                     }
                     break;
 
                 case "videosFromSearchByString":
-                    youtubeSearchData.object = {
-                        part: "id,snippet",
-                        type: "video",
-                        q: _params.q,
-                        order: _params.order || "date",
-                        key: _params.key,
-                        maxResults: _params.maxResults || 20,
-                    };
+                    youtubeSearchData.object.type = "video";
+                    if (typeof _params.order !== "undefined") {
+                        youtubeSearchData.object.order = _params.order;
+                    }
+                    if (typeof _params.q !== "undefined") {
+                        youtubeSearchData.object.q = _params.q;
+                    }
+                    if (typeof _params.maxResults !== "undefined") {
+                        youtubeSearchData.object.maxResults = _params.maxResults;
+                    }
 
                     youtubeSearchData.url = this.getApiBaseUrl()+"search?";
-                    if (_params.nextPageToken) {
-                        youtubeSearchData.url += "pageToken="+_params.nextPageToken+"&";
+                    if (typeof _params.nextPageToken !== "undefined") {
+                        youtubeSearchData.url += "pageToken=" + _params.nextPageToken + "&";
                     }
                     break;
 
                 case "videosFromPlaylistById":
-                    youtubeSearchData.object = {
-                        part: "id,snippet",
-                        type: "video",
-                        playlistId: _params.playlistId,
-                        key: _params.key,
-                        maxResults: _params.maxResults || 20,
-                    };
+                    youtubeSearchData.object.playlistId = _params.playlistId;
+                    youtubeSearchData.object.type = "video";
+
+                    if (typeof _params.maxResults !== "undefined") {
+                        youtubeSearchData.object.maxResults = _params.maxResults;
+                    }
 
                     youtubeSearchData.url = this.getApiBaseUrl()+"playlistItems?";
-                    if (_params.nextPageToken) {
-                        youtubeSearchData.url += "pageToken="+_params.nextPageToken+"&";
+                    if (typeof _params.nextPageToken !== "undefined") {
+                        youtubeSearchData.url += "pageToken=" + _params.nextPageToken + "&";
+                    }
+                    break;
+
+                case "videoById":
+                    youtubeSearchData.object.id = _params.videoId;
+
+                    youtubeSearchData.url = this.getApiBaseUrl()+"videos?";
+                    if (typeof _params.nextPageToken !== "undefined") {
+                        youtubeSearchData.url += "pageToken=" + _params.nextPageToken + "&";
                     }
                     break;
 
                 case "channelById":
-                    youtubeSearchData.object = {
-                        part: "id,snippet",
-                        type: "channel",
-                        channelId: _params.channelId,
-                        key: _params.key,
-                        maxResults: _params.maxResults || 1,
-                    };
+                    youtubeSearchData.object.type = "channel";
 
                     youtubeSearchData.url = this.getApiBaseUrl()+"search?";
-                    if (_params.nextPageToken) {
-                        youtubeSearchData.url += "pageToken="+_params.nextPageToken+"&";
+                    if (typeof _params.nextPageToken !== "undefined") {
+                        youtubeSearchData.url += "pageToken=" + _params.nextPageToken + "&";
                     }
                     break;
             }

@@ -21,11 +21,22 @@ Author: Jonathan Hornung ([JohnnyTheTank](https://github.com/JohnnyTheTank))
 
 ### factory methods
 
-#### getVideos
-
-
+#### getVideo
 ```js
-//https://developers.google.com/youtube/v3/docs/channels/list
+//docs: https://developers.google.com/youtube/v3/docs/videos/list
+youtubeFactory.getVideoById({
+    videoId: "<VIDEO_ID>",
+    key: "<YOUR_API_KEY>",
+}).success(function (_data) {
+    //on success
+}).error(function (_data) {
+    //on error
+});
+```
+
+#### getVideos
+```js
+//docs: https://developers.google.com/youtube/v3/docs/channels/list
 youtubeFactory.getVideosFromChannelById({
     channelId: "<CHANNEL_ID>",
     q: "<SEARCH_STRING>", // (optional) filters the channel result with your search string
@@ -38,8 +49,8 @@ youtubeFactory.getVideosFromChannelById({
 }).error(function (_data) {
     //on error
 });
-
 ```
+
 ```js
 //docs: https://developers.google.com/youtube/v3/docs/search/list
 youtubeFactory.getVideosFromSearchByString({
