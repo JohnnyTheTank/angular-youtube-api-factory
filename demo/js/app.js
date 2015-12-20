@@ -1,7 +1,7 @@
 var app = angular.module("app", ['jtt_youtube']);
 app.controller('controller', ['$scope', 'youtubeFactory', function($scope, youtubeFactory) {
 
-    //var _apiKey = "<YOUR_YOUTUBE_API_KEY>";
+    var _apiKey = "<YOUR_YOUTUBE_API_KEY>";
 
     youtubeFactory.getVideosFromChannelById({
         channelId: "UCVkXCOYluJvD6OPjX9HXj-A",
