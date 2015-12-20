@@ -16,7 +16,7 @@ Author: Jonathan Hornung ([JohnnyTheTank](https://github.com/JohnnyTheTank))
     <script src="bower_components/angular-youtube-api-factory/src/angular-youtube-api-factory.js"></script>
     ```
 
-4. Use the factory `youtubeFactory`.
+4. Use the factory `youtubeFactory`
 
 
 ### factory methods
