@@ -22,9 +22,9 @@ angular.module("jtt_youtube", [])
             });
         };
 
-        youtubeFactory.getVideosFromSearchByString = function (_params) {
+        youtubeFactory.getVideosFromSearchByParams = function (_params) {
 
-            var youtubeSearchData = youtubeSearchDataService.getNew("videosFromSearchByString", _params);
+            var youtubeSearchData = youtubeSearchDataService.getNew("videosFromSearchByParams", _params);
 
             return $http({
                 method: 'GET',
@@ -105,13 +105,23 @@ angular.module("jtt_youtube", [])
                     }
                     break;
 
-                case "videosFromSearchByString":
+                case "videosFromSearchByParams":
                     youtubeSearchData.object.type = "video";
                     if (typeof _params.order !== "undefined") {
                         youtubeSearchData.object.order = _params.order;
                     }
                     if (typeof _params.q !== "undefined") {
                         youtubeSearchData.object.q = _params.q;
+                    }
+                    if (typeof _params.location !== "undefined") {
+                        youtubeSearchData.object.location = _params.location;
+                    }
+                    if (typeof _params.locationRadius !== "undefined") {
+                        youtubeSearchData.object.locationRadius = _params.locationRadius;
+                    } else {
+                        if (typeof _params.location !== "undefined") {
+                            youtubeSearchData.object.locationRadius = "5000m"
+                        }
                     }
                     if (typeof _params.maxResults !== "undefined") {
                         youtubeSearchData.object.maxResults = _params.maxResults;

@@ -5,23 +5,32 @@ app.controller('controller', ['$scope', 'youtubeFactory', function($scope, youtu
 
     youtubeFactory.getVideosFromChannelById({
         channelId: "UCVkXCOYluJvD6OPjX9HXj-A",
-        maxResults: "50", // (optional) default: 5
+        maxResults: "50",
         key: _apiKey,
     }).success(function (_data) {
         console.info("videos from channel by id", _data);
     });
 
-    youtubeFactory.getVideosFromSearchByString({
+    youtubeFactory.getVideosFromSearchByParams({
         q: "fcbayern",
-        maxResults: "50", // (optional) default: 5
+        maxResults: "50",
         key: _apiKey,
     }).success(function (_data) {
-        console.info("videos from search by string", _data);
+        console.info("videos from search by q", _data);
+    });
+
+    youtubeFactory.getVideosFromSearchByParams({
+        location: "37.42307,-122.08427",
+        locationRadius: "1000m",
+        maxResults: "50",
+        key: _apiKey,
+    }).success(function (_data) {
+        console.info("videos from search by location", _data);
     });
 
     youtubeFactory.getVideosFromPlaylistById({
         playlistId: "PLNLa2lbKPczGCueOYxjrwYDuNTBtQveK0",
-        maxResults: "50", // (optional) default: 5
+        maxResults: "50",
         key: _apiKey,
     }).success(function (_data) {
         console.info("videos from playlist by id", _data);

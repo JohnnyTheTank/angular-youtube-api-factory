@@ -53,8 +53,10 @@ youtubeFactory.getVideosFromChannelById({
 
 ```js
 //docs: https://developers.google.com/youtube/v3/docs/search/list
-youtubeFactory.getVideosFromSearchByString({
-    q: "<SEARCH_STRING>", //search string
+youtubeFactory.getVideosFromSearchByParams({
+    q: "<SEARCH_STRING>", // (optional) search string
+    location: "<SEARCH_LOCATION>", // (optional) The parameter value is a string that specifies latitude/longitude coordinates e.g. '37.42307,-122.08427'.
+    locationRadius: "<LOCATION_RADIUS>", // (optional) valid values e.g. '1500m', '5km', '10000ft', and '0.75mi' | default: '5000m'
     order: "<ORDER_TYPE>", // (optional) valid values: 'date', 'rating', 'relevance', 'title', 'videoCount', 'viewCount' | default: 'date'
     maxResults: "<MAX_RESULTS>", // (optional) valid values: 0-50 | default: 5
     pageToken: "<PAGE_TOKEN>", // (optional)
