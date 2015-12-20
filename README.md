@@ -25,11 +25,12 @@ Author: Jonathan Hornung ([JohnnyTheTank](https://github.com/JohnnyTheTank))
 
 
 ```js
+//https://developers.google.com/youtube/v3/docs/channels/list
 youtubeFactory.getVideosFromChannelById({
     channelId: "<CHANNEL_ID>",
     q: "<SEARCH_STRING>", // (optional) filters the channel result with your search string
     order: "<ORDER_TYPE>", // (optional) default: 'date'
-    maxResults: "<MAX_RESULTS>", // (optional) default: 20
+    maxResults: "<MAX_RESULTS>", // (optional) correct values: 0-50 // default: 5, min:
     pageToken: "<PAGE_TOKEN>", // (optional)
     key: "<YOUR_API_KEY>",
 }).success(function (_data) {
@@ -40,10 +41,11 @@ youtubeFactory.getVideosFromChannelById({
 
 ```
 ```js
+//docs: https://developers.google.com/youtube/v3/docs/search/list
 youtubeFactory.getVideosFromSearchByString({
     q: "<SEARCH_STRING>", //search string
     order: "<ORDER_TYPE>", // (optional) default: 'date'
-    maxResults: "<MAX_RESULTS>", // (optional) default: 20
+    maxResults: "<MAX_RESULTS>", // (optional) correct values: 0-50 // default: 5, min:
     pageToken: "<PAGE_TOKEN>", // (optional)
     key: "<YOUR_API_KEY>",
 }).success(function (_data) {
@@ -54,9 +56,10 @@ youtubeFactory.getVideosFromSearchByString({
 ```
 
 ```js
+//docs: https://developers.google.com/youtube/v3/docs/playlists/list
 youtubeFactory.getVideosFromPlaylistById({
     playlistId: "<PLAYLIST_ID>",
-    maxResults: "<MAX_RESULTS>", // (optional) default: 20
+    maxResults: "<MAX_RESULTS>", // (optional) correct values: 0-50 // default: 5, min:
     pageToken: "<PAGE_TOKEN>", // (optional)
     key: "<YOUR_API_KEY>",
 }).success(function (_data) {
@@ -69,9 +72,9 @@ youtubeFactory.getVideosFromPlaylistById({
 
 #### getChannel
 ```js
+// docs: https://developers.google.com/youtube/v3/docs/search/list
 youtubeFactory.getChannelById({
     channelId: "<CHANNEL_ID>",
-    maxResults: "<MAX_RESULTS>", // (optional) default: 1
     pageToken: "<PAGE_TOKEN>", // (optional)
     key: "<YOUR_API_KEY>",
 }).success(function (_data) {
@@ -82,13 +85,11 @@ youtubeFactory.getChannelById({
 ```
 
 
-## Youtube JSON API
-
-* Doku: https://developers.google.com/youtube/v3/docs/
-* Api Explorer: https://developers.google.com/apis-explorer/#p/youtube/v3/
-* Kanal-ID Converter: http://kid.yt.j.pfweb.eu/
+## Youtube Data JSON API
+* Docs: https://developers.google.com/youtube/v3/docs/
+* API Explorer: https://developers.google.com/apis-explorer/#p/youtube/v3/
+* Channel-ID Converter: http://kid.yt.j.pfweb.eu/
 
 
 ## License
-
 MIT
