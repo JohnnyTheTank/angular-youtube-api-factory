@@ -1,23 +1,36 @@
 module.exports = function(grunt) {
 
+    var banner = '/**\n    @name: <%= pkg.name %> \n    @version: <%= pkg.version %> (<%= grunt.template.today("dd-mm-yyyy") %>) \n    @author: <%= pkg.author %> \n    @url: <%= pkg.homepage %> \n    @license: <%= pkg.license %>\n*/\n';
+
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         uglify: {
             js: {
                 files : {
-                    'dist/angular-youtube-api-factory.min.js' : ['src/angular-youtube-api-factory.js']
+                    'dist/angular-youtube-api-factory.min.js' : ['src/*.js']
                 }
             },
             options: {
-                banner: '\n/*! <%= pkg.name %> v<%= pkg.version %> (<%= grunt.template.today("dd-mm-yyyy") %>) by <%= pkg.author %> */\n',
+                banner: banner,
             }
+        },
+        concat: {
+            options: {
+                separator: ';',
+                banner: banner,
+            },
+            dist: {
+                files : {
+                    'dist/angular-youtube-api-factory.js' : ['src/*.js']
+                }
+            },
         },
         watch: {
             minifiyJs: {
                 files: [
-                    'src/angular-youtube-api-factory.js'
+                    'src/*.js'
                 ],
-                tasks: ['uglify'],
+                tasks: ['uglify', 'concat'],
                 options: {
                     spawn: true,
                 },
@@ -27,6 +40,7 @@ module.exports = function(grunt) {
 
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-concat');
 
     grunt.registerTask('default', ['watch']);
 
