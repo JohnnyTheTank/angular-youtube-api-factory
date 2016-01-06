@@ -7,7 +7,7 @@ app.controller('controller', ['$scope', 'youtubeFactory', function($scope, youtu
         channelId: "UCVkXCOYluJvD6OPjX9HXj-A",
         maxResults: "50",
         key: _apiKey,
-    }).success(function (_data) {
+    }).then(function (_data) {
         console.info("videos from channel by id", _data);
     });
 
@@ -15,7 +15,7 @@ app.controller('controller', ['$scope', 'youtubeFactory', function($scope, youtu
         q: "fcbayern",
         maxResults: "50",
         key: _apiKey,
-    }).success(function (_data) {
+    }).then(function (_data) {
         console.info("videos from search by q", _data);
     });
 
@@ -24,7 +24,7 @@ app.controller('controller', ['$scope', 'youtubeFactory', function($scope, youtu
         locationRadius: "1000m",
         maxResults: "50",
         key: _apiKey,
-    }).success(function (_data) {
+    }).then(function (_data) {
         console.info("videos from search by location", _data);
     });
 
@@ -32,21 +32,21 @@ app.controller('controller', ['$scope', 'youtubeFactory', function($scope, youtu
         playlistId: "PLNLa2lbKPczGCueOYxjrwYDuNTBtQveK0",
         maxResults: "50",
         key: _apiKey,
-    }).success(function (_data) {
+    }).then(function (_data) {
         console.info("videos from playlist by id", _data);
     });
 
     youtubeFactory.getVideoById({
         videoId: "rG-haoIhH9o",
         key: _apiKey,
-    }).success(function (_data) {
+    }).then(function (_data) {
         console.info("video by id", _data);
     });
 
     youtubeFactory.getChannelById({
         channelId: "UCVkXCOYluJvD6OPjX9HXj-A",
         key: _apiKey,
-    }).success(function (_data) {
+    }).then(function (_data) {
         console.info("channel by id", _data);
     });
 

@@ -27,9 +27,9 @@ Author: Jonathan Hornung ([JohnnyTheTank](https://github.com/JohnnyTheTank))
 youtubeFactory.getVideoById({
     videoId: "<VIDEO_ID>",
     key: "<YOUR_API_KEY>",
-}).success(function (_data) {
+}).then(function (_data) {
     //on success
-}).error(function (_data) {
+}).catch(function (_data) {
     //on error
 });
 ```
@@ -44,9 +44,9 @@ youtubeFactory.getVideosFromChannelById({
     maxResults: "<MAX_RESULTS>", // (optional) valid values: 0-50 | default: 5
     pageToken: "<PAGE_TOKEN>", // (optional)
     key: "<YOUR_API_KEY>",
-}).success(function (_data) {
+}).then(function (_data) {
     //on success
-}).error(function (_data) {
+}).catch(function (_data) {
     //on error
 });
 ```
@@ -61,9 +61,9 @@ youtubeFactory.getVideosFromSearchByParams({
     maxResults: "<MAX_RESULTS>", // (optional) valid values: 0-50 | default: 5
     pageToken: "<PAGE_TOKEN>", // (optional)
     key: "<YOUR_API_KEY>",
-}).success(function (_data) {
+}).then(function (_data) {
     //on success
-}).error(function (_data) {
+}).catch(function (_data) {
     //on error
 });
 ```
@@ -75,9 +75,9 @@ youtubeFactory.getVideosFromPlaylistById({
     maxResults: "<MAX_RESULTS>", // (optional) valid values: 0-50 // default: 5
     pageToken: "<PAGE_TOKEN>", // (optional)
     key: "<YOUR_API_KEY>",
-}).success(function (_data) {
+}).then(function (_data) {
     //on success
-}).error(function (_data) {
+}).catch(function (_data) {
     //on error
 });
 ```
@@ -90,9 +90,9 @@ youtubeFactory.getChannelById({
     channelId: "<CHANNEL_ID>",
     pageToken: "<PAGE_TOKEN>", // (optional)
     key: "<YOUR_API_KEY>",
-}).success(function (_data) {
+}).then(function (_data) {
     //on success
-}).error(function (_data) {
+}).catch(function (_data) {
     //on error
 });
 ```
