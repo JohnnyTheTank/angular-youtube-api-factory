@@ -1,7 +1,8 @@
 **angular-youtube-api-factory** is an angularjs module with a youtube api factory.
+[![npm version](https://badge.fury.io/js/angular-youtube-api-factory.png)](https://badge.fury.io/js/angular-youtube-api-factory)
+[![Bower version](https://badge.fury.io/bo/angular-youtube-api-factory.png)](https://badge.fury.io/bo/angular-youtube-api-factory)
 
 Author: Jonathan Hornung ([JohnnyTheTank](https://github.com/JohnnyTheTank))
-
 
 ## Usage
 
