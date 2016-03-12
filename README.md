@@ -134,7 +134,7 @@ youtubeFactory.getChannelById({
 ## Youtube Data JSON API
 * Docs: https://developers.google.com/youtube/v3/docs/
 * API Explorer: https://developers.google.com/apis-explorer/#p/youtube/v3/
-* User Name to Channel ID Converter: http://johnnythetank.github.io/youtube-channel-name-converter/
+* Youtube Username to Channel ID Converter: http://johnnythetank.github.io/youtube-channel-name-converter/
 
 
 ## License
