@@ -48,7 +48,7 @@ youtubeFactory.getVideoById({
 ```js
 //docs: https://developers.google.com/youtube/v3/docs/channels/list
 youtubeFactory.getVideosFromChannelById({
-    channelId: "<CHANNEL_ID>",
+    channelId: "<CHANNEL_ID>", // converter: http://johnnythetank.github.io/youtube-channel-name-converter/
     q: "<SEARCH_STRING>", // (optional) filters the channel result with your search string
     order: "<ORDER_TYPE>", // (optional) valid values: 'date', 'rating', 'relevance', 'title', 'videoCount', 'viewCount' | default: 'date'
     publishedAfter: "<PUBLISHED_AFTER>", // (optional) RFC 3339 formatted date-time value (1970-01-01T00:00:00Z)
