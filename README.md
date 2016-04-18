@@ -119,7 +119,7 @@ youtubeFactory.getVideosFromPlaylistById({
 ```js
 // docs: https://developers.google.com/youtube/v3/docs/search/list
 youtubeFactory.getChannelById({
-    channelId: "<CHANNEL_ID>",
+    channelId: "<CHANNEL_ID>", // converter: http://johnnythetank.github.io/youtube-channel-name-converter/
     pageToken: "<PAGE_TOKEN>", // (optional)
     part: "<PART>", // (optional) default: 'id,snippet'
     key: "<YOUR_API_KEY>",
