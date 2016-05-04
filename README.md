@@ -61,7 +61,8 @@ youtubeFactory.getVideosFromChannelById({
     videoLicense: "<VIDEO_LICENSE>", // (optional) valid values: 'any','creativeCommon','youtube'
     videoSyndicated: "<VIDEO_SYNDICATED>", // (optional) restrict a search to only videos that can be played outside youtube.com. valid values: 'any','true' | default: 'any'
     fields: "<FIELDS>", // (optional) Selector specifying which fields to include in a partial response
-    pageToken: "<PAGE_TOKEN>", // (optional)
+    nextPageToken: "<NEXT__PAGE_TOKEN>", // (optional) either `nextPageToken` or `prevPageToken`
+    prevPageToken: "<PREV__PAGE_TOKEN>", // (optional) either `nextPageToken` or `prevPageToken`
     part: "<PART>", // (optional) default: 'id,snippet'
     key: "<YOUR_API_KEY>",
 }).then(function (_data) {
@@ -89,7 +90,8 @@ youtubeFactory.getVideosFromSearchByParams({
     videoLicense: "<VIDEO_LICENSE>", // (optional) valid values: 'any','creativeCommon','youtube'
     videoSyndicated: "<VIDEO_SYNDICATED>", // (optional) restrict a search to only videos that can be played outside youtube.com. valid values: 'any','true' | default: 'any'
     fields: "<FIELDS>", // (optional) Selector specifying which fields to include in a partial response
-    pageToken: "<PAGE_TOKEN>", // (optional)
+    nextPageToken: "<NEXT__PAGE_TOKEN>", // (optional) either `nextPageToken` or `prevPageToken`
+    prevPageToken: "<PREV__PAGE_TOKEN>", // (optional) either `nextPageToken` or `prevPageToken`
     part: "<PART>", // (optional) default: 'id,snippet'
     key: "<YOUR_API_KEY>",
 }).then(function (_data) {
@@ -104,7 +106,8 @@ youtubeFactory.getVideosFromSearchByParams({
 youtubeFactory.getVideosFromPlaylistById({
     playlistId: "<PLAYLIST_ID>",
     maxResults: "<MAX_RESULTS>", // (optional) valid values: 0-50 // default: 5
-    pageToken: "<PAGE_TOKEN>", // (optional)
+    nextPageToken: "<NEXT__PAGE_TOKEN>", // (optional) either `nextPageToken` or `prevPageToken`
+    prevPageToken: "<PREV__PAGE_TOKEN>", // (optional) either `nextPageToken` or `prevPageToken`
     part: "<PART>", // (optional) default: 'id,snippet'
     key: "<YOUR_API_KEY>",
 }).then(function (_data) {
@@ -120,7 +123,8 @@ youtubeFactory.getVideosFromPlaylistById({
 // docs: https://developers.google.com/youtube/v3/docs/search/list
 youtubeFactory.getChannelById({
     channelId: "<CHANNEL_ID>", // converter: http://johnnythetank.github.io/youtube-channel-name-converter/
-    pageToken: "<PAGE_TOKEN>", // (optional)
+    nextPageToken: "<NEXT__PAGE_TOKEN>", // (optional) either `nextPageToken` or `prevPageToken`
+    prevPageToken: "<PREV__PAGE_TOKEN>", // (optional) either `nextPageToken` or `prevPageToken`
     part: "<PART>", // (optional) default: 'id,snippet'
     key: "<YOUR_API_KEY>",
 }).then(function (_data) {
