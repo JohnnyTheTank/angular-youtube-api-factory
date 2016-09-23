@@ -1,6 +1,6 @@
 /**
     @name: angular-youtube-api-factory 
-    @version: 0.6.1 (23-09-2016) 
+    @version: 0.6.2 (23-09-2016) 
     @author: Jonathan Hornung 
     @url: https://github.com/JohnnyTheTank/angular-youtube-api-factory#readme 
     @license: MIT

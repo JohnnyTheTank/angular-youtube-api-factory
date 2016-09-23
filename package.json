@@ -1,6 +1,6 @@
 {
   "name": "angular-youtube-api-factory",
-  "version": "0.6.1",
+  "version": "0.6.2",
   "description": "angularjs factory for youtube json rest api requests",
   "main": "dist/angular-youtube-api-factory.min.js",
   "scripts": {
