@@ -82,15 +82,11 @@ angular.module("jtt_youtube", [])
                 object: {
                     key: _params.key,
                 },
-                url: "",
+                url: '',
             };
             
-            if (angular.isDefined(_params.part)) {
-                youtubeSearchData.object.part = _params.part;
-            }
-            
             switch (_type) {
-                case "videosFromChannelById":
+                case 'videosFromChannelById':
                     
                     youtubeSearchData = this.fillDataInObjectByList(youtubeSearchData, _params, [
                         ['part', 'id,snippet'],
@@ -110,14 +106,14 @@ angular.module("jtt_youtube", [])
                         'fields'
                     ]);
                     
-                    youtubeSearchData.url = this.getApiBaseUrl() + "search?";
-                    
-                    if (angular.isDefined(_params.nextPageToken)) {
-                        youtubeSearchData.url += "pageToken=" + _params.nextPageToken + "&";
+                    youtubeSearchData.url = this.getApiBaseUrl() + 'search?';
+    
+                    if (_params.nextPageToken || _params.prevPageToken) {
+                        youtubeSearchData.url += 'pageToken=' + (_params.nextPageToken || _params.prevPageToken) + '&';
                     }
                     break;
                 
-                case "videosFromSearchByParams":
+                case 'videosFromSearchByParams':
     
                     youtubeSearchData = this.fillDataInObjectByList(youtubeSearchData, _params, [
                         ['part', 'id,snippet'],
@@ -141,17 +137,17 @@ angular.module("jtt_youtube", [])
                         youtubeSearchData.object.locationRadius = _params.locationRadius;
                     } else {
                         if (angular.isDefined(_params.location)) {
-                            youtubeSearchData.object.locationRadius = "5000m"
+                            youtubeSearchData.object.locationRadius = '5000m'
                         }
                     }
                     
-                    youtubeSearchData.url = this.getApiBaseUrl() + "search?";
-                    if (angular.isDefined(_params.nextPageToken)) {
-                        youtubeSearchData.url += "pageToken=" + _params.nextPageToken + "&";
+                    youtubeSearchData.url = this.getApiBaseUrl() + 'search?';
+                    if (_params.nextPageToken || _params.prevPageToken) {
+                        youtubeSearchData.url += 'pageToken=' + (_params.nextPageToken || _params.prevPageToken) + '&';
                     }
                     break;
                 
-                case "videosFromPlaylistById":
+                case 'videosFromPlaylistById':
     
                     youtubeSearchData = this.fillDataInObjectByList(youtubeSearchData, _params, [
                         ['part', 'id,snippet'],
@@ -161,34 +157,34 @@ angular.module("jtt_youtube", [])
                         'fields'
                     ]);
                     
-                    youtubeSearchData.url = this.getApiBaseUrl() + "playlistItems?";
-                    if (angular.isDefined(_params.nextPageToken)) {
-                        youtubeSearchData.url += "pageToken=" + _params.nextPageToken + "&";
+                    youtubeSearchData.url = this.getApiBaseUrl() + 'playlistItems?';
+                    if (_params.nextPageToken || _params.prevPageToken) {
+                        youtubeSearchData.url += 'pageToken=' + (_params.nextPageToken || _params.prevPageToken) + '&';
                     }
                     break;
                 
-                case "videoById":
+                case 'videoById':
                     youtubeSearchData = this.fillDataInObjectByList(youtubeSearchData, _params, [
                         ['part', 'id,snippet,contentDetails,statistics'],
                     ]);
                     
                     youtubeSearchData.object.id = _params.videoId;
                     
-                    youtubeSearchData.url = this.getApiBaseUrl() + "videos?";
-                    if (angular.isDefined(_params.nextPageToken)) {
-                        youtubeSearchData.url += "pageToken=" + _params.nextPageToken + "&";
+                    youtubeSearchData.url = this.getApiBaseUrl() + 'videos?';
+                    if (_params.nextPageToken || _params.prevPageToken) {
+                        youtubeSearchData.url += 'pageToken=' + (_params.nextPageToken || _params.prevPageToken) + '&';
                     }
                     break;
                 
-                case "channelById":
+                case 'channelById':
                     youtubeSearchData = this.fillDataInObjectByList(youtubeSearchData, _params, [
                         ['part', 'id,snippet'],
                         ['type', 'channel']
                     ]);
                     
-                    youtubeSearchData.url = this.getApiBaseUrl() + "search?";
-                    if (angular.isDefined(_params.nextPageToken)) {
-                        youtubeSearchData.url += "pageToken=" + _params.nextPageToken + "&";
+                    youtubeSearchData.url = this.getApiBaseUrl() + 'search?';
+                    if (_params.nextPageToken || _params.prevPageToken) {
+                        youtubeSearchData.url += 'pageToken=' + (_params.nextPageToken || _params.prevPageToken) + '&';
                     }
                     break;
             }
