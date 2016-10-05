@@ -11,8 +11,7 @@ Author: Jonathan Hornung ([JohnnyTheTank](https://github.com/JohnnyTheTank))
     1. `bower install --save angular-youtube-api-factory`
     2. `npm install --save angular-youtube-api-factory`
     3. download [angular-youtube-api-factory.zip](https://github.com/JohnnyTheTank/angular-youtube-api-factory/zipball/master)
-2. Add **`jtt_youtube`** to your application's module dependencies.
-3. Include dependencies in your HTML.
+2. Include dependencies in your HTML.
     1. When using bower:
     ```html
     <script src="bower_components/angular-youtube-api-factory/dist/angular-youtube-api-factory.min.js"></script>
@@ -25,7 +24,26 @@ Author: Jonathan Hornung ([JohnnyTheTank](https://github.com/JohnnyTheTank))
     ```html
     <script src="angular-youtube-api-factory.min.js"></script>
     ```
-4. Use `youtubeFactory` via dependency injection
+3. Add **`jtt_youtube`** to your application's module dependencies
+  
+    ```JavaScript
+    angular.module('app', ['jtt_youtube']);
+    ```
+4. Use the factory `youtubeFactory`
+
+    ```JavaScript
+    angular.module('app')
+        .controller('appController', function($scope, youtubeFactory){
+        
+            youtubeFactory.getVideosFromSearchByParams({
+                q: 'fcbayern',
+                key: '<YOUR_API_KEY>'
+            }).then(function (data) {
+                console.info("videos from search by query", data);
+            });
+            
+        });
+    ```
 
 
 ### factory methods
