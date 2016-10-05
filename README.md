@@ -39,7 +39,7 @@ Author: Jonathan Hornung ([JohnnyTheTank](https://github.com/JohnnyTheTank))
                 q: 'fcbayern',
                 key: '<YOUR_API_KEY>'
             }).then(function (data) {
-                console.info("videos from search by query", data);
+                console.info('videos from search by query', data);
             });
             
         });
